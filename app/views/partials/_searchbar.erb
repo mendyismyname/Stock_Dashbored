@@ -1,0 +1,37 @@
+<div>
+<script>
+  $(document).ready(function(){
+
+  $('input').on('keyup', function( e ){
+    var input = $(this).val(),
+        JSONPath = '/stocks/' + input,
+        $list = $('#list');
+
+    $list.html('');
+    if(!input)
+      return; 
+
+    $.getJSON(JSONPath, function( response ){
+      response.forEach(function( obj ){
+        var template = '<li> Name: ' + obj.name + ' Ticker: ' + obj.ticker + '</li>';
+    
+        $list.append(template);
+      });
+    });
+
+  });
+});
+  </script>
+</head>
+<body>
+ 
+<div>
+  <label for="tags">Tags: </label>
+  <input id="tags" style='top: 200px;
+background: red;
+position: fixed;'>
+</div>
+
+<ul id="list"></ul>
+</div>
+ 
