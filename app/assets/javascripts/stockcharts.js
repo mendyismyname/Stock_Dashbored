@@ -105,11 +105,9 @@ function historical(ticker){
   var lastTime = null;
 
   // google finance API for retrieving past week of closing prices
-  $.get("http://finance.google.com/finance/historical",
+  $.get("/quotes/" + ticker,
     {
-          q: ticker,
-          startdate:'Jul 1 2014',
-          output:'csv'
+      startdate:'Jul 1 2014',
     },
     function(csvData){
       // parse the CSV into an array
