@@ -4,3 +4,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+
+task :drop_old_user do 
+	User.where("created_at < ?", 1.day.ago).destroy_all
+end

@@ -3,7 +3,7 @@ require 'net/http'
 require 'open-uri'
 
 class User < ActiveRecord::Base
-  has_many :user_stocks
+  has_many :user_stocks, :dependent => :destroy
   has_many :stocks, through: :user_stocks
 
 

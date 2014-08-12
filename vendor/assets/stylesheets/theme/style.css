@@ -4688,7 +4688,7 @@ div.tagsinput span.tag {
 }
 .monthly-stats.pink {
     background-color:#9972b5 !important;
-;
+    ;
 }
 .sparkline {
     text-align:center;
@@ -5513,7 +5513,7 @@ div.tagsinput span.tag {
 }
 
 .gear-settings i{
-    width: 35px; height: 35px;F
+    width: 35px; height: 35px;
     display: inline-block;
     text-align: center;
     line-height: 33px;
@@ -5537,7 +5537,7 @@ div.tagsinput span.tag {
 
 }
 .show-switcher{
-right: -1px;
+    right: -1px;
     top:80px;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
